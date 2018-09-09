@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<neta charset="utf-8">
+	<title>주휴수당 계산기</title>
+    <h3> 열심히 일한 그대에게 </h3>
+<style>
+head,body {background-color: orange;}
+h3 { text-align:center; width:200px; border-bottom:1px solid ; padding : 80px; 
+     margin : 50px auto;}  
+h1 { text-align : center; position:relative; bottom:120px;}
+.wrap { padding:30px; text-align:center; margin:auto; 
+	   position:relative; bottom:100px; width:800px;}
+#workTime {width:150px; height:70px; position:relative; font-size : 35px; border:none; }
+#pay {width:180px; height:70px; position:relative; font-size : 35px; border:none;}
+#btn {width:160px; height:70px; background-color:brown;
+      text-align:center; position:absolute top: 0px; font-size:20px;}
+#btn2 {width:180px; height:70px; background-color:white; 
+       text-align:center; font-size:20px;}
+#smallText{text-align:left; width:300px; position:relative; left:170px; padding:10px;}
+#f1 { padding:60px; font-size:45px; }
+#f2 { display:grid; grid-template-columns: 1fr 1fr; margin:auto;}
+#f3 { background-color:white; width:180px; height:70px; margin:auto; text-align:center;
+       position:relative; left:60px; color:gray;}
+#f4 { text-align:left;}
+p {font-size:30px;}
+
+</style>
+</head>
+<body>
+
+	<h1>나의 주휴수당은 얼마?</h1>
+     <div class="wrap">
+     	<div id= "smallText"><strong>1주일 동안 일한 시간 &nbsp; &nbsp;
+     	&nbsp; &nbsp; &nbsp; &nbsp; 시급</div></strong>
+     	<input type="text" placeholder="" id="workTime">
+     	<big>&nbsp;시간&nbsp; &nbsp;</big>
+     	<input type="text" placeholder="설마최저..?" id="pay">
+     	<big>&nbsp;원</big>
+     	<div id = f1>나의 주휴수당은<p></p>
+     	    <div id = f2>
+     	    	<div id = f3>0</div>
+     	        <div id = f4>원 입니다.</div>
+     	</div>
+     	<h2></h2>
+
+     	<button id="btn" ><strong>계산하기</strong></button>
+     	<button id="btn2" onclick="location.reload();"><strong>다시계산하기</strong></button>
+     </div>
+     <div style ="border-top:1px solid; width:400px; margin:auto;">
+     </div>
+ <script type="text/javascript">
+ 	btn.onclick = function(){myFunction(),cssChange()};
+ 	function myFunction(){
+ 				var cal = workTime.value*4/20*pay.value;
+ 		f3.innerHTML = cal;
+ 	}
+    function cssChange(){
+    	 		var x = document.getElementById("f3");
+ 		x.style.color = "black";
+    }
+   
+
+
+ </script>
+</body>
+</html>
+
